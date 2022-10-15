@@ -1,0 +1,58 @@
+#Dictionary is nothing but key value pairs
+d1={}
+print(type(d1))
+d2={"Harry":"Burger","Rohan":"Fish","Skill":"Roti"}
+print(d2)
+print(d2["Harry"])
+print(d2['Rohan'])
+
+#Dictionary inside dictionary
+d3={"Harry":"Burger","Rohan":"Fish","SkillF":"Roti","Shubham":{"B":"maggie","L":"roti","D":"Chicken"}}
+print(d3)
+print(d3["Shubham"])
+
+#Now we are updating the dictionary d3
+d3["Ankit"]="Junk food"
+print(d3)
+
+d3["Aurangzeb"]="Kabab"
+print(d3)
+
+#Deleting a key and its corresponding value from the array
+del[d3["Aurangzeb"]]
+print(d3)
+
+"""Functions in a dictionary"""
+d4=d3 #On doing this a new dictionary is not created. Any change we do in d3 will also take place in d4
+print(d3)
+print(d4)
+del d4['Harry']
+print(d3)  #The changes we are doing in d4 are also being reflected in d3. To avoid this we have to use .copy()
+
+d5=d3.copy()
+print(d5)
+print(d3)
+
+del d5["Rohan"]
+print(d5)
+print(d3) #Changes in d5 are not being reflected in d3 because of the copy command
+
+print(d3["Rohan"])
+print(d3.get("Rohan"))
+
+#Update function of dictionary
+d3.update({"Harry":"Burger"})
+print(d3)
+
+#code to find out all the keys
+print(d3.keys())
+
+li=[]
+for i in d3.keys():
+    li.append(i)
+print(li)
+
+#Code to find out all the values
+print(d3.values())
+print(d3.items()) #Items= Keys+Values
+
