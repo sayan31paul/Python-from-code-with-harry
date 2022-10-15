@@ -1,0 +1,43 @@
+#lists can contain strings, integers, floats simultaneously.
+#Arrays can contain only integers and floats.
+
+numbers=[2,7,9,11,3]
+print(numbers[2])    #indexing in a list
+
+print(numbers[1:4])  #slicing in a list
+
+print(numbers[:5])
+print(numbers[:])
+
+print(numbers[0:5:2]) #extended slicing allows skipping
+
+print(numbers[::2])
+
+print(numbers)
+
+numbers=numbers.append(7)
+print(numbers)
+
+print(numbers.insert(1,67)) #1 is the index and 67 is the number to be inserted to the index.
+
+numbers.remove(9) #The number which needs to be removed is the argument to be given to the function.
+
+numbers.pop()  #removes the last element
+
+"""Mutable- Can change"""
+"""Immutable-Cannot change"""
+
+#Tuples
+
+tp=(1,5,58)
+print(tp)     #tuples are immutable
+
+#tp[1]=8 #This is not possible because tuples are immutable.
+
+#easy method of swapping using python
+a=1
+b=2
+a,b=b,a
+print(a,b)
+
+#Search list functions in internet 
