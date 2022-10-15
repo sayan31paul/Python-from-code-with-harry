@@ -1,0 +1,5 @@
+Pycharm is an intregrated development environment(IDE).Python is the base interpreter. Pycharm gives us a better interface.Pycharm has no interpreter of its own. It is using the python interpreter.
+
+Modules are the pre-written codes that we can import in our program to make out codes shorter and better.
+Built-in modules are those which are already installed in python interpreter. If the model is external (like Flask, Pandas), then we will have to download and install using "pip install" command.
+
