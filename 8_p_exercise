@@ -1,0 +1,25 @@
+"""Create a faulty calculator which will do all right calculations except 45*3=555, 56+9=77, 56/6=4"""
+a=int(input("Enter first number"))
+sign=input("Enter any sign among +,-,*,/")
+b=int(input("Enter second number"))
+
+if sign=="*":
+    if a==45 and b==3:
+        print(a,"*",b,"=",555)
+    else:
+        print(a,"*",b,"=",a*b)
+
+elif sign=="+":
+    if a==56 and b==9:
+        print(a,"+",b,"=",77)
+    else:
+        print(a,"+",b,"=",a+b)
+
+elif sign=="/":
+    if a==56 and b==6:
+        print(a,"/",b,"=",4)
+    else:
+        print(a,"/",b,"=",a/b)
+
+elif sign=="-":
+    print(a,"-",b,"=",a-b)
