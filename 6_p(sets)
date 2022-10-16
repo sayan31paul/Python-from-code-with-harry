@@ -1,0 +1,39 @@
+"""Sets are similar to the sets we have studied in mathematics."""
+s_from_set=set([1,2,3,4])
+print(s_from_set)
+print(type(s_from_set))
+
+s=set() #this is a blank set
+#adding "1" to blank set
+s.add(1)
+print(s)
+s.add(2)
+print(s)
+
+#adding more than two elements in the set
+s=s.union({3,4})
+print(s)
+
+#Sets doesnot allow repetition
+s1=s.union({1,2,3})
+print(s1)
+
+#union operation works same as union operation in probability
+s3={1,2,3,4}
+s4={3,4,5,6,7}
+s5=s3.union(s4)
+print(s5)
+
+#intersection operation works same as intersection in probability
+s3={1,2,3,4}
+s4={3,4,5,6,7}
+print(s3.intersection(s4))
+
+print(len(s5))
+print(max(s5)) #similar functions are also present. Check in the internet
+
+#Checking if two sets are disjoint or not
+#disjoint set--> Sets which doesnot have any element in common
+print(s3.isdisjoint(s4))
+
+print(s5)
