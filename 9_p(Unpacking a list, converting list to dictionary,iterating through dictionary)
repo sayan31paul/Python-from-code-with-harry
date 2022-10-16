@@ -1,0 +1,26 @@
+list1=[["Harry",2],["Larry",6],["Carry",6],["Marie",25]]
+for i in list1:
+    print(i)
+
+#Now unpacking the list of lists.
+for i,j in list1:
+    print(i,"and lollypop is",j)
+
+#Type casting a dictionary into list
+dict1=dict(list1)
+print(dict1)
+
+#For a dictionary, items=keys+values
+#Now iterating through the dictionary using for loop
+for i,j in dict1.items():
+    print(i,":",j,"\n")
+
+#If we need only the keys
+for i in dict1:
+    print(i)
+
+print("\n")
+
+#If we need only the values from for loop
+for i in dict1.values():
+    print(i)
