@@ -4,3 +4,17 @@ while(i<45):
     print(i)
     i=i+1           #if this is not given then the counter will go on running for infinite iterations because the condition will be satisfied every time.
 
+
+
+while(True):        #This is a while loop which never stops.
+    print(i)
+    i=i+1  
+    
+#take input from user until user gives an input greater than 100
+while(True):
+    a=int(input("Enter a number"))
+    if a<100:
+        print("You have entered ",a)
+    else:
+        print("Congratulations, you have entered 100")
+        break
