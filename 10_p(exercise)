@@ -1,0 +1,6 @@
+#write a python code to print only those elemnts in a list which are numeric and greater than 6
+
+items=["Sayan","Dhiman","Raja",6,85,99,"Souvik"]
+for i in items:
+    if str(i).isnumeric()==True and i>6:      #.isnumeric() is a string function. Hence we need to type cast i to string before applying isnumeric() on i.
+        print(i)
