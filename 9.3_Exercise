@@ -1,0 +1,13 @@
+"""Keep any random number in the program hidden from the user.Ask the user to guess the number. The maximum number
+of guesses is 9. You have to also show the number of guesses left"""
+a=45
+for i in range(0,9):
+    b=int(input("Enter the number"))
+    if b==a:
+        print("Correct guess")
+        break
+    elif(b<a):
+        print("Enter a higher number")
+    elif(b>a):
+        print("Enter a lower number")
+    print("Number of attemps left is ",(9-(i+1)))
