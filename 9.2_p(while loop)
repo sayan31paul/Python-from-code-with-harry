@@ -1,0 +1,6 @@
+i=0
+
+while(i<45):
+    print(i)
+    i=i+1           #if this is not given then the counter will go on running for infinite iterations because the condition will be satisfied every time.
+
