@@ -1,0 +1,6 @@
+a=int(input("Enter a: \n"))
+b=int(input("Enter b: \n"))
+
+print("B is greater than a") if a<b else print("A is greater than B")
+
+#Using one liner code like this doesnot save much space in memory but it reduces the readability of the program
