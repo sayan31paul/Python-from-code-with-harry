@@ -1,0 +1,23 @@
+def function1(a,b):
+    print("Hello you are in function 1", a+b) #output obtained from this statement canot be stored inside a variable.
+
+function1(5,7)
+
+#To store the input in  a variable we need to use the return statement.
+
+def function2(a,b):
+    average=(a+b)/2
+    return average
+
+average1= function2(5,7)
+print(average1)
+
+#docstring
+def function3(a,b):
+    """This is the function which will calculate average of two numbers.
+    This function doesnotwork for 3 numbers."""
+    average=(a+b)/2
+    return average
+
+print(function3.__doc__) #This is printing the docstring.
+
