@@ -1,0 +1,48 @@
+#Asignment operators
+#Comparision operators
+#Logical operators
+#Identity operators
+#Membership Operators
+#Bitwise operators
+
+
+"""Arithmetic operators"""
+# "//"  -> Floor division operator(Simply ignores the part after the decimal)
+# "**"  -> Exponential operator
+# "%"   -> Returns the remainder
+
+"""Asignment operators"""
+# x=5 # "=" is the asignment operator
+# x+=7 is same as x=x+7
+#  "/="
+#  "-="
+#  "%="
+#Check for other asignment operators in internet
+
+""" Comparision operators"""
+# "==" Checks the equality between two numerical values or strings
+# ">="
+# "<="
+# "!="
+
+"""Logical operators"""
+# "and"
+# "or"
+
+"""Identity operators"""
+a=True
+b=False
+print(a is b)  # "is" is the identity operator
+# "is not" is another identity operator
+
+"""Membership operators"""
+list=[3,3,2,2,39,35,32,33]
+print(32 in list)          # "in" is the membership operator
+print(324 in list)
+print(324 not in list)     # "not in" is another membership operator
+
+"""Bitwise operator"""
+# "&" ->and operator
+# "|" ->or operator
+print(0 & 1)
+print(0 | 1)
