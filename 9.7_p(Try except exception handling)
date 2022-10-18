@@ -1,0 +1,12 @@
+#File IO basics
+"""
+"r" :Open file in read mode
+"w" :Open file in write mode.
+"x" :Exclusive creation , i.e:The operation will be executed only if the file doesnot exist. If the file already 
+exists, the operation will fail.
+"a" :Aooend ->Add more content to a file.
+"t" :Opening a file in text mode.
+"b" :Opening a file in binary mode
+"+" :read and write both.
+
+"""
