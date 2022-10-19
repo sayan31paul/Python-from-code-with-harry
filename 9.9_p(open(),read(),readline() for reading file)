@@ -1,0 +1,40 @@
+#"r" mode and "t" mode are deafult modes for opening a file
+#f=open("sayan.txt") #The file is being opened in read mode by deafult.
+#content=f.read()
+#print(content)
+
+#f.close()
+
+
+"""If we open a file, then it will be using some resources. Using f.close() releases the resouces after the use
+of the file is over. After the file is closed, other programs can also use the file. Closing the file is a good
+practice."""
+
+#f1=open("sayan.txt")
+#content=f1.read(3) #Reads the first 3 letters of the file
+#print(content)
+
+#content=f1.read(3) #Using same command again reads the next 3 letters of the file.
+#print(content)
+
+#f1.close()
+
+"""What to do if we want to read the file line by line"""
+#f2=open("sayan.txt")
+#content=f2.read()
+
+#for line in content:
+    #print(line,end="")
+
+"""use of readline()"""
+#f3=open("sayan.txt")
+#print(f3.readline()) #prints the first line
+#print(f3.readline()) #prints the second line
+#print(f3.readline())#print the third line
+
+#f3.close()
+
+"""readlines() stores the lines in a list"""
+#f3=open("sayan.txt")
+#list1=f3.readlines()
+#print(list1)
