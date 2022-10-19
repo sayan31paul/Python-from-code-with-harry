@@ -1,0 +1,30 @@
+#f=open("harry.txt","w") #Open the file in write mode #If the file doesnot exist, a new file will be created.
+#f.write("Harry bhai bahut acche hain.")
+#f.write("\n")
+#f.write("Sayan bhai bahut acche hain.") #this will be added to the end of the file
+#print(f)
+#f.close()
+
+"""Now we are reopening the file and checking whether using write() keeps the prevoius data or not"""
+#f=open("harry.txt","w")
+#f.write("Checking whether I lost the data")
+#f.close()
+
+"""Unfortunately using write() here deletes the previous data. To avoid deletion of the prevoius data we need 
+to use the append command"""
+#f=open("harry.txt","a")
+#f.write("\n")
+#f.write("Checking whether append is working or not.") #Append is working in the desired manner.
+#f.close()
+
+"""How many characters did we write in the file"""
+#f=open("harry.txt","a")
+#a=f.write("Harry bhai bahut acche hain") #This will be appended to the file as well as we can
+#print(a)
+#f.close()
+
+"""Handle read and append both"""
+f=open("harry.txt","r+") #note that "r+" will do the work of reading and APPENDING.
+print(f.read())
+f.write("Tanhk you") 
+f.close()
