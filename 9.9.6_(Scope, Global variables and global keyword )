@@ -1,0 +1,46 @@
+l=10 #global variable
+
+def function1(n):
+    l=5           #local variable #function1() will give first preference to this local variable "l" than to the global variable "l".
+    m=8
+    print(l,m)
+    print(n, "I have printed")
+
+function1("This is from function1 ")
+
+"""If a local and a global variable is present with the same name then the function(within which the local variable 
+is present) will give first preference to the local variable. If local variable with the given name is not present,
+ then it will search in the global variable."""
+
+def function2(): #note that l is not a local variable inside this function
+    m=8
+    l=l+45  #This operation is not possible . A global variable cacnot be changed from inside a function.
+    print(l)
+
+#function2()
+
+"""To change a global variable from inside a function, we need to use the keyword global"""
+def function3(n):
+    m=8
+    global l       #global keyword is used to update a global variable from inside a function
+    l=l+45
+    print(l,m)
+    print(n,"I have printed")
+
+function3(3)
+
+#Applying global keyword on function inside function
+
+x=30
+
+def harry():
+    x=20
+    def rohan():
+        global x    #The global variable will go outside the fucntions to the open space and search for the variable x
+        x=80
+    print("before claaing rohan",x)
+    rohan()
+    print("after calling rohan",x)
+harry()
+
+
