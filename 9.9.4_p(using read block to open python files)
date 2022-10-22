@@ -1,0 +1,16 @@
+f= open("harry.txt") #f is the file pointer
+print(f.readlines())
+#since readlines has printed all the lines, the pointer has already come to the end of the file.
+#So readline() will no longer print any more line.
+print(f.readline())
+
+f.close()
+
+#using with open("harry.txt") as f: #this does the same work as f=open("harry.txt")
+
+with open("harry.txt") as f:
+    a=f.read(4)
+    print(a)
+    print(f.readline())
+
+f.close()
