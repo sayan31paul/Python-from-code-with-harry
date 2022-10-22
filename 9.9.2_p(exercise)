@@ -1,0 +1,27 @@
+#Pattern printing
+#Input=Integer n
+#Boolean input=0 or 1
+
+#True
+#*
+#**
+#***
+#****
+
+#False
+#****
+#***
+#**
+#*
+
+a=int(input("Enter the number of stars"))
+b=int(input("Enter 0 for ascending order and 1 for descending order"))
+if b==0:
+    for i in range(1,a+1):
+        print(i* " *",end=" ")
+        print("\n")
+elif b==1:
+    for i in range(a,0,-1):
+        print(i*" *",end=" ")
+        print("\n")
+
