@@ -1,0 +1,20 @@
+f=open("harry.txt") #"f" is our file pointer or file handle.
+print(f.readline())
+print(f.readline())
+
+#If we go on doing this with a big file, the file pointer or file handle gets updated every time.
+#If we need to know the file pointer is currently in which character we have to use f.tell()
+print(f.tell())
+print(f.readline())
+print(f.tell())
+
+#If we want te reset our file pointer to a particular character we have to use f.seek()
+f.seek(10)
+print(f.readline())
+
+f.seek(0)
+print(f.readline())
+
+f.close() #Don't forget to close the file
+
+#closing the file allows other programs to use the file and also saves resources
