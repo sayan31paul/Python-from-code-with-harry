@@ -1,0 +1,20 @@
+"""Lambda functions or anonymous functions"""
+def add(a,b):
+    return(a+b)
+
+minus=lambda x,y:x-y
+print(minus(9,4))
+
+def a_first(a):     #This function is returning the first element
+    return a[1]
+
+a=[[1,14],[5,6],[8,23]]
+a.sort(key=a_first)         #explore sort function from internet
+print(a)
+
+#The above work can also be done as
+a=[[1,14],[5,10],[3,2]]
+a.sort(key=lambda x:x[0])  #sort function is taking another function as input
+print(a)
+
+#explore sort function from internet
