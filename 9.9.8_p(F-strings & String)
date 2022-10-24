@@ -1,0 +1,20 @@
+me="Harry"
+a1=3
+a="this is %s"%me #This method becomes very unreadable when the string becomes very large.
+print(a)
+
+
+a="This is {} {}"
+b=a.format(me, a1)
+print(b)
+
+a="This is {1} {0}"
+b=a.format(me, a1)#Readability is  a problem here also.
+print(b)
+
+#So solve the issue of readability, the developers of python introduced the copncept of F-Strings.
+a= f"This is {me} {a1}"  #f in the starting indicates f strings.
+print(a)
+
+a= f"This is {me} {a1} {4*65}"
+print(a)
