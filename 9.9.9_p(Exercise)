@@ -1,45 +1,69 @@
-#snake, water, gun
-#snake drinks water
-#gun kills snake
-#gun kills snake
+# snake, water, gun
+# snake drinks water
+# gun kills snake
+# gun kills snake
+# This game has to be played 10 times
+# The player who wins maximum number of times wins.
+# Print how many times computer has won and how many times you have won.
 import random
-mylist=["snake","water","gun"]
-a=random.choices(mylist,k=1)[0]
-#print(a)
-b=input("Enter either snake, water or gun: ")
-b=b.lower()
-#print(b)
-print(f"computer chose {a}")
-print(f"you chose {b}")
 
-if b!="snake" or b!="water" or b!="gun":
-    print("Wrong input")
-
-elif a=="snake":
-    if b=="snake":
-        print("draw")
-    elif b=="water":
-        print("You lost")
-    elif b=="gun":
-        print("You won")
+mylist = ["snake", "water", "gun"]
+a = random.choices(mylist, k=1)[0]
+comp_score=0
+human_score=0
+# print(a)
+for i in range(0, 10):
+    b = input("Enter either snake, water or gun: ")
+    b = b.lower()
+# print(b)
+    print(f"computer chose {a}")
+    print(f"you chose {b}")
 
 
-elif a=="water":
-    if b=="water":
-        print("draw")
-    elif b=="gun":
-        print("You lost")
-    elif b=="snake":
-        print("You won")
+    if a == "snake":
+        if b == "snake":
+            print("draw")
+        elif b == "water":
+            print("You lost")
+            comp_score=comp_score+1
+        elif b == "gun":
+            print("You won")
+            human_score=human_score+1
+        else:
+            print("Wrong input")
 
 
-elif a=="gun":
-    if b=="gun":
-        print("draw")
-    elif b=="snake":
-        print("You lost")
-    elif b=="water":
-        print("You won")
+    elif a == "water":
+        if b == "water":
+            print("draw")
+        elif b == "gun":
+            print("You lost")
+            comp_score = comp_score + 1
+        elif b == "snake":
+            print("You won")
+            human_score = human_score + 1
+        else:
+            print("Wrong input")
 
 
-#remember that if one statement gets executed, the other statements donot get executed.
+    elif a == "gun":
+        if b == "gun":
+            print("draw")
+        elif b == "snake":
+            print("You lost")
+            comp_score = comp_score + 1
+        elif b == "water":
+            print("You won")
+            human_score = human_score + 1
+        else:
+            print("Wrong input")
+
+# remember that if one statement gets executed, the other statements donot get executed.
+print(comp_score)
+print(human_score)
+if comp_score>human_score:
+    print("computer finally won")
+elif comp_score==human_score:
+    print("draw")
+else:
+    print("You finally won")
