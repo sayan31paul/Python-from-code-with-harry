@@ -1,0 +1,45 @@
+#snake, water, gun
+#snake drinks water
+#gun kills snake
+#gun kills snake
+import random
+mylist=["snake","water","gun"]
+a=random.choices(mylist,k=1)[0]
+#print(a)
+b=input("Enter either snake, water or gun: ")
+b=b.lower()
+#print(b)
+print(f"computer chose {a}")
+print(f"you chose {b}")
+
+if b!="snake" or b!="water" or b!="gun":
+    print("Wrong input")
+
+elif a=="snake":
+    if b=="snake":
+        print("draw")
+    elif b=="water":
+        print("You lost")
+    elif b=="gun":
+        print("You won")
+
+
+elif a=="water":
+    if b=="water":
+        print("draw")
+    elif b=="gun":
+        print("You lost")
+    elif b=="snake":
+        print("You won")
+
+
+elif a=="gun":
+    if b=="gun":
+        print("draw")
+    elif b=="snake":
+        print("You lost")
+    elif b=="water":
+        print("You won")
+
+
+#remember that if one statement gets executed, the other statements donot get executed.
