@@ -1,0 +1,8 @@
+"""When we work on big projects like making a game or making a website or even making a data analysis tool,
+we need to ensure that out program runs continuously.
+Our programs can stop running beacuse of the following reasons:-
+1. Packages in python gets updated
+
+To make sure that out program goes on running even after a used python package has been updated, we have to use
+virtual environments.
+"""
