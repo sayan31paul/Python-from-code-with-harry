@@ -1,0 +1,51 @@
+numbers=["3","34","64"]
+
+#We cannot convert the strings to int inside the list using the following method
+for i in numbers:
+    i=int(i)
+print(numbers)
+
+#This is the correct method for converting strings to int inside a list
+for i in range(len(numbers)):
+    numbers[i]=int(numbers[i])
+print(numbers)
+
+#we can do the same work using map()
+
+numbers1=["35","69","89"]
+numbers1=list(map(int,numbers1)) #int() is the function which we want to apply on the list. "numbers" is the list
+print(numbers1)
+
+def square(a):
+    return a**2
+num=[2,3,4,56,2,5,62,56]
+num=list(map(square,num))
+print(num)
+
+#doing the same task using lambda function
+#lmbd_sq=lamdba a: a**2
+#num1=[2,8,2,4,5,3,6,98,52]
+#squared_list=list(map(lmbd_sq, num1))
+#print(squared_list)
+
+print("\n")
+
+def square(a):
+    return a*a
+
+def cube(a):
+    return a*a*a
+
+#map function
+func=[square,cube]
+for i in range(5):
+    val=list(map(lambda x:x(i), func))
+    print(val)
+
+list_1=[1,2,3,4,5,6,7,8,9]
+
+def is_greater_5(num):
+    return num>5
+
+gr_than_5= list(filter(is_greater_5, list_1))
+print(gr_than_5)
