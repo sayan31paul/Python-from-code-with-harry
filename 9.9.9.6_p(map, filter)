@@ -49,3 +49,10 @@ def is_greater_5(num):
 
 gr_than_5= list(filter(is_greater_5, list_1))
 print(gr_than_5)
+
+#reduce function
+
+from functools import reduce
+list1=[1,2,3,4,5,7]
+num=reduce(lambda x,y:x+y, list1)
+print(num)
