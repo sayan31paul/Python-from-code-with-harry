@@ -1,0 +1,51 @@
+def function_name_print(a,b,c,d): #This function takes four arguments only
+    print(a,b,c,d)
+
+function_name_print("Harry","Rohan","Skillf","Shivam")
+#function_name_print("Harry","Rohan","Skillf","Shivam","Hammad")#If we take a fourth argument, then it will throw an error
+
+"""Here we can add another argument in the function definition but we cannot do so when we are building scalable applications
+"""
+
+def funargs(*args):
+    print(args[0])
+    print(type(args))    #Note that we will be sending a list but we will get a tuple in return.
+
+har=["harry","Rohan","Skillf","Hammad","Shivam"]
+funargs(*har)
+
+def funargs(*args):
+    for i in args:
+        print(i)
+    print(type(args))    #Note that we will be sending a list but we will get a tuple in return.
+
+funargs(*har)
+
+def funargs(normal,*args):
+    print(normal)
+    for i in args:
+        print(i)
+funargs("Rohan",*har)
+print("\n")
+funargs("Rohan") #args and kawrgs are function. It is not compulsary to give args and kwargs during calling the function.
+
+"""kwargs"""
+#def funargs(normal,*args): #In the function definition we must keep the normal argument before the *args argument
+
+#Normal argument is kept first, then args, then kwargs
+
+har=["Harry","Rohan","Skillf","Hammad","Shivam","The programmer"]
+normal="I am a normal argument and the students are:"
+kw={"Rohan":"Monitor", "Harry":"Fitness instructor","The programmer":"Coordinator"}
+print("\n")
+
+def funargs(normal,*args,**kw):  #** indicates kwargs
+    print(normal)
+    for i in args:
+        print(i)
+    for keys,values in kw.items():
+        print(f"{keys} is a {values}")
+
+funargs("Rohan",*har,**kw)
+
+
