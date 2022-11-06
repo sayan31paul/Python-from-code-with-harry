@@ -1,0 +1,16 @@
+l1=["Bhindi","aloo","Chopsticks","Chowmein"]
+
+#after creating the list , we are told to remove the second element from the list
+
+i=1
+for item in l1:
+    if i%2!=0:
+        print(f" Jarvis please buy {item}")
+    i=i+1
+
+print("\n")
+
+#the problem of taking new index variable can be removed using enumerate function
+for index, item in enumerate(l1):
+    if index%2==0:
+        print(f"Jarvis please buy {item}")
