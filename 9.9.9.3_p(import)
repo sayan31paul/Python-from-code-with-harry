@@ -1,0 +1,9 @@
+import sys
+print(sys.path)"""If python goes to search for a package when we use the import keyword, this is the directory it
+will follow.
+If we have created another file with a package and that package comes in a directory before the actual directory. Then python 
+will import that false directory."""
+
+import file2
+a=file2.addition(2,3)
+print(a)
