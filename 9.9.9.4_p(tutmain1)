@@ -1,0 +1,4 @@
+import tutmain2
+print(tutmain2.add(5,3)) #note that along with add function all codes are being executed.
+
+#to ensure that all only the add function gets executed we have to use __main__ in tutmain1
