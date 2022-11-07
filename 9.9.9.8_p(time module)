@@ -1,0 +1,20 @@
+import time
+
+initial=time.time()
+k=0
+while(k<45):
+    print("This is Harry bhai")
+    k=k+1
+final=time.time()
+print(f"time taken for while loop is {final-initial}")
+
+print("\n")
+
+initial=time.time()
+for i in range(45):
+    print("This is Harry bhai")
+
+final=time.time()
+print(f"time taken for for loop is {final-initial}")
+
+print(final) 
