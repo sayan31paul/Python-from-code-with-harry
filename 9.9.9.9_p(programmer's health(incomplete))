@@ -1,0 +1,60 @@
+import datetime
+from datetime import datetime
+#print(datetime.now().date())
+
+file1 = open("Health.txt","a")
+file1.write(f"Today's date is {datetime.now().date()}")
+file1.write("\n")
+file1.close()
+
+# if(datetime.datetime.now().time() == (6, 20, 0, 0)):
+from pygame import mixer
+def playmusic():
+    mixer.init()
+    mixer.music.load("song.mp3")
+    mixer.music.set_volume(0.7)
+    mixer.music.play()
+    x=input("enter stop to stop")
+    if x=="stop":
+        mixer.music.stop()
+    #break
+
+def record(item):
+    file1 = open("Health.txt", "a")
+    file1.write(f"You {item} on {datetime.now.time()}")
+    file1.close()
+
+
+current_time=datetime.now().time()
+if (current_time.hour<9):
+    print("Your office time has not started yet")
+elif(current_time.hour>17):
+    print("Your office time is over")
+else:
+    from datetime import time
+    current_modified_water=time(9,0,0)
+    current_modified_eyes = time(9, 0, 0)
+    current_modified_exercise = time(9, 0, 0)
+
+    while(datetime.now().time().hour<17 and datetime.now().time().minute<30):
+        if (datetime.now().time()==current_modified_water):
+            playmusic()
+            record("had water")
+            #if a==stop:
+                #stop the alarm
+            current_modified_water=current_modified_water+datetime.timedelta(minutes=30)
+
+        if (datetime.now().time()==current_modified_eyes):
+            playmusic()
+            record("had eye exercise")
+            # if a==stop:
+            # stop the alarm
+            current_modified_eyes = current_modified_eyes + datetime.timedelta(minutes=45)
+
+
+        if (datetime.now().time()==current_modified_exercise):
+            playmusic()
+            record("had workout")
+            # if a==stop:
+            # stop the alarm
+            current_modified_exercise = current_modified_exercise + datetime.timedelta(minutes=30)
