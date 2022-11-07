@@ -1,0 +1,7 @@
+#Water-water.mp3-after driking water, he has to type "drank" to stop the music-log generate time stamp in a text file
+#Eyes-eyes.mp3-alarm will ring every 30 minutes and he has to type "EyDone".
+#physical activity-workout.mp3- every 45 minutes physical actitivty and then type "ExDone"
+#incase there is a time clash give more imortance to any one and then execute the other.
+
+#Rules:
+#Pygame module to play audio
