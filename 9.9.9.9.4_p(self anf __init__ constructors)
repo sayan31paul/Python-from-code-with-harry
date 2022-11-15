@@ -1,0 +1,35 @@
+class Employee:
+    no_of_leaves=8
+
+    #functions inside class are known as methods.
+    def printdetails(self):
+        return f"Name is {self.name}. Salary is {self.salary} and role is {self.role}"
+
+harry=Employee()
+larry=Employee()
+
+harry.name="Harry"
+harry.salary=455
+harry.role="Instructor"
+
+larry.name="Larry"
+larry.salary=4554
+larry.role="Student"
+
+print(larry.printdetails()) #larry will pass automatically inside the function as argument
+
+#Now we will be learning about constructors
+class Employee_1:
+    no_of_leaves=8
+    def __init__(self,aname,asalary,arole):
+        self.name=aname
+        self.salary=asalary
+        self.role=arole
+
+    def printdetails(self):
+        return f"Name is {self.name}. Salary is {self.salary} and role is {self.role}"
+
+harry=Employee_1("Harry",455,"Instructor") #we are creating an object harry with the arguments being given at the time of construction
+#__init__ method handles the above task.
+print(harry.printdetails())
+
