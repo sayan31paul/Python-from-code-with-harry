@@ -1,0 +1,34 @@
+class Employee: #class name should start with capital because this is a convention
+    no_of_leaves=8 #this belongs to neither rohan or harry object. This belongs to the class.
+    pass
+
+harry=Employee()
+rohan=Employee()
+
+harry.name="Harry"
+harry.salary=455
+harry.role="Instructor"
+
+rohan.name="Rohan"
+rohan.salary=4554
+rohan.role="Student"
+
+"""The salary of harry and rohan are the properties of the object. They are not obtained from the class by inheritance"""
+print(harry.salary)
+print(harry.no_of_leaves) #This is not a property of the objects. This is obtained from the class.
+
+print(Employee.no_of_leaves)#Accessing the instance directly from the class.
+
+#now trying to change the value of the instance variable inside the class.
+Employee.no_of_leaves=10 #changed inside the class
+print(Employee.no_of_leaves)
+print(rohan.no_of_leaves) #once it has been changed inside the class, it also changes inside the object.
+
+#now trying to change value of instance variable from the object and test whether it causes any change inside the class
+rohan.no_of_leaves=12
+print(rohan.no_of_leaves)
+print(Employee.no_of_leaves) #note that object cannot change the value inside the class.
+
+print(rohan.__dict__) # __dict__ is an attribute whcih shows what is inside an object in the from of dictionary.
+
+#We can never change the variable inside a class from an instance or object.
