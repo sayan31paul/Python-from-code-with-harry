@@ -1,0 +1,13 @@
+class student:
+    pass        #We are keeping the class vacant. We are writing "pass" so that it doesnot throw an error.
+
+harry=student()    #we are creating two objects from the same class.
+larry=student()
+
+print(harry,larry)  #from the output of this statement you can note that harry and larry are two objects of the same class that are stored at two different memory locations
+
+#now we can add instance variables inside harry and larry
+harry.name="Harry"
+harry.std=12
+harry.section=1
+print(harry.name)
