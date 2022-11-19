@@ -1,0 +1,10 @@
+#Abstraction and Encasulation
+"""Imagine you are making a computer. You bought monitor of one company, keyboard from one company, mouse from one
+company, cabinet from one company, mother board from one company, hraddisk from another company, etc.
+Here monitor, mouse, keyboards, cabinets, hard disk etc are layers of abstraction.
+It is even possible that from a particular task, the computer itself is a layer of abstraction. Ex- We are sending
+a satellite to mars which contains many computers. Here a computer itself is a layer of abstraction.
+We have to do encapsulation to acheive abstraction in object oriented programming.
+Encapsulation occurs when the user is using the item but it doesnot know which process is occuring inside the item.
+"Aam khai, gutli na gine". """
+"""Hiding the technical details of implementation is known as encapsulation."""
