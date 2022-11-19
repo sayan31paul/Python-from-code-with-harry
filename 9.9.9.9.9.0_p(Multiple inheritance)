@@ -1,0 +1,67 @@
+#multiple inheritance
+class Employee:
+    no_of_leaves=8
+    var=8
+
+    def __init__(self,aname,asalary,arole):
+        self.name=aname
+        self.salary=asalary
+        self.role=arole
+
+    def printdetails(self):
+        return f"The name is {self.name}. Salary is {self.salary} and role is {self.role} "
+
+    @classmethod
+    def change_leaves(cls,newleaves):
+        cls.no_of_leaves=newleaves
+
+    @classmethod
+    def from_dash(cls,string):
+        return cls(*string.split("-"))
+
+    @staticmethod
+    def printgood(string):
+        print("This is good ", + string )
+
+
+
+class Player:
+    no_of_games=4
+    var=9
+
+    def __init__(self,name,game):
+        self.name=name
+        self.game=game
+
+    def printdetails(self):
+        return f"The Name is {self.name}. Game is {self.game} and role is {self.role}"
+
+class CoolProgrammer(Employee,Player): #Here we are inheriting CoolProgrammer class from Employee class and Player class
+    language="C++"
+    var=10
+    def printlanguage(self):
+        print(self.language)
+
+
+"""We have inherited the CoolProgrammer class from Employee class and Player class. So it will first search the
+constructor in Employee class"""
+
+harry=Employee("Harry",255,"Instructor")
+rohan=Employee("Rohan",455,"Student")
+
+shubham=Player("Shubham",["Cricket"])
+
+"""Now will be creating object from CoolProgrammer class by giving the constructors for the Employee class"""
+
+karan=CoolProgrammer("Karan",8999,"Pro-Programmer") #Here we have given the constructors for the Employee class
+det=karan.printdetails() #object from CoolProgrammer class is calling methods from Employee class.
+print(det)
+karan.printlanguage()
+
+print(karan.var)
+"""var attribute is present in all the three class. From which class will instance karan take the value of var?
+Since karan in an object of the class CoolProgrammer, it will first search the value of var in CoolProgrammer,
+Then is will serach in Employee class beacuse it the first argument of the CoolProgrammer class. Then it will search 
+in the Player class which is the second argument of the CoolProgrammer class.
+
+This is applicable for methods , constructors, classmethods as well."""
