@@ -1,0 +1,33 @@
+#Private, public and protected access specifiers
+"""Public--> Everybody can see this information"""
+"""Protected---> Only the class which contains the variable and the classes which are being derived from it can 
+access protected variables.
+ Private---> Only the class containing the variable can access the variable."""
+
+class Employee:
+    no_of_leaves=8 #Normal varaibles are public variables
+    var=8
+    _test=9 #Protected variables start with _
+    __priv=98 #Private variables are indicated by __
+
+    def __init__(self,aname,asalary,arole):
+        self.name=aname
+        self.salary=asalary
+        self.role=arole
+
+    def printdetails(self):
+        return f"The name is {self.name}. Salary is {self.salary} and role is {self.role} "
+
+    @classmethod
+    def change_leaves(cls, newleaves):
+        cls.no_of_leaves = newleaves
+
+    @classmethod
+    def from_dash(cls, string):
+        return cls(*string.split("-"))
+
+emp=Employee("Harry",343,"Programmer")
+print(emp._test) #We can print the protected variable
+
+#How can we print a private variable?
+print(emp._Employee__priv)
