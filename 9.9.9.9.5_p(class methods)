@@ -10,7 +10,7 @@ class Employee:
         return f"The name is {self.name}. Salary is {self.salary} and role is {self.role}"
 
     @classmethod
-    def change_leaves(cls, newleaves):
+    def change_leaves(cls, newleaves):     #Here cls refers to class employee
         cls.no_of_leaves=newleaves
 
 
@@ -22,5 +22,7 @@ print(harry.salary)
 harry.no_of_leaves=25
 print(harry.no_of_leaves)
 
-harry.change_leaves(34)
+harry.change_leaves(34)    #change leaves function automatically takes the class Employee because "harry" is an object of employee.
 print(Employee.no_of_leaves) #The object harry has finally been able to change the value of attribute inside the class.
+
+#biggest advantage of class methods is that we can use it as alternative constructor.
