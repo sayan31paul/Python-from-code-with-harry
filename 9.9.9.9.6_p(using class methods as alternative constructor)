@@ -1,0 +1,36 @@
+class Employee:
+    no_of_leaves=8
+
+    def __init__(self,aname,asalary,arole):
+        self.name=aname
+        self.salary=asalary
+        self.role=arole
+
+    def printdetails(self):
+        return f"The name is {self.name}. Salary is {self.salary} and role is {self.role}"
+
+    @classmethod
+    def change_leaves(cls, newleaves):     #Here cls refers to class "employee"
+        cls.no_of_leaves=newleaves
+
+    @classmethod
+    def from_str(cls,string):              #Here cls refers to class "employee"
+        params=string.split("-")
+        return cls(params[0],params[1],params[2])  #"cls" after "return" is used to detect that params[1] is salary
+
+
+harry=Employee("Harry", 255, "Instructor")
+rohan=Employee("Rohan",455,"Student")
+karan=Employee.from_str("Karan-480-Student")
+
+print(harry.salary)
+
+harry.no_of_leaves=25
+print(harry.no_of_leaves)
+
+harry.change_leaves(34)    #change leaves function automatically takes the class Employee because "harry" is an object of employee.
+print(Employee.no_of_leaves) #The object harry has finally been able to change the value of attribute inside the class.
+
+#biggest advantage of class methods is that we can use it as alternative constructor.
+
+print(karan.salary)
