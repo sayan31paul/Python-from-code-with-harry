@@ -1,0 +1,44 @@
+"""Polymorphism refers to the ability to take various forms
+
+Lest there be a function named "len" in python which counts the length. It can count the length of both string and
+list. This process is known as polymorphism.
+
+Polymorphism means same function name(but different signatures) being used for different types.
+
+Different signatures means give according to list if it is a list and give as string when given as string."""
+
+l=[10,20,30,40]
+print(len(l))
+
+s="welcome"
+print(len(s))
+
+#Here we will study two things, that is function overloading and function overwriting.
+
+#function overloading
+class Ws:
+    def displayinfo(self,name=' '):
+        print("Welcome to Wscubetech "+name)
+
+obj=Ws()
+obj.displayinfo() #We didnot pass any parameter stiil it ran without any error
+obj.displayinfo("Python")
+
+"""Same function is doing two tasks. When we are passing an argument in the displayinfo, it is returning "Welsome to Wscubetech"
+and when we are passing an argument into the function, it is returning "Welcome to Wscubetech Python." """
+
+
+#overwriting
+"""Let us create a function called Iip1 and make it inherit Iip and both Iip1 and Iip have functions of the same name
+ In this case the functions will be overwritten by the functions in Iip."""
+
+class Iip:
+    def displayinfo(self):
+        print("Welcome to Wscubetech")
+
+class Iip1(Iip):
+    def displayinfo(self):
+        print("Welcome to Iip1")
+
+obj1=Iip1()
+obj1.displayinfo() #note that the result is "Welcome to Iip1. Hence the inheriting function overwrites the inherited function"
