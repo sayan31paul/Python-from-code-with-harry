@@ -42,3 +42,19 @@ class Iip1(Iip):
 
 obj1=Iip1()
 obj1.displayinfo() #note that the result is "Welcome to Iip1. Hence the inheriting function overwrites the inherited function"
+
+#Superfunction
+"""The function from the inherited class gets overwritten. If we want to call that overwritten class too, we have to use the
+super function."""
+
+class Iip2:
+    def displayinfo(self):
+        print("Welcome to Wscubetech")
+
+class Iip3(Iip):
+    def displayinfo(self):
+        super().displayinfo()
+        print("Welcome to Iip2")
+
+obj3=Iip3()
+obj3.displayinfo()
