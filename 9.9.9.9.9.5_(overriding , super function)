@@ -1,0 +1,59 @@
+class A:
+    classvar1="I am in a class variable in class A"
+    def __init__(self):
+        self.var1="I an inside class A's constructor" #var1 is instance variable
+        self.classvar1="Instance var in class A"      #classvar1 is instance variable
+class B(A):
+    classvar1="I am in class B"                       #classvar1 is class variable
+
+a=A()
+b=B()
+
+print(b.classvar1)
+"""Here it is printing the classvar1 of class A inspite of classvar1 being present in class 2,
+ This is because classvar1 is present as instance variable in class A while it is present as class variable in
+ class B"""
+
+""" First priority is given to instance variable."""
+
+print ("\n")
+
+class A:
+    classvar1="I am in a class variable in class A"
+    def __init__(self):
+        self.var1="I an inside class A's constructor" #var1 is instance variable
+        self.classvar1="Instance var in class A"      #classvar1 is instance variable
+        self.special="Special1"
+class B(A):
+    classvar1="I am in class B"                       #classvar1 is class variable
+    def __init__(self):
+        self.var1="I an inside class B's constructor" #var1 is instance variable
+        self.classvar1="Instance var in class B"      #classvar1 is instance variable
+
+a=A()
+b=B()
+
+print(b.classvar1) #The output here is "Instance var in class B"
+#print(b.special) #This will be throwing an error, because __init__ of class A has been oberwritten and this no longer exists
+
+"""What to do to stop the overwriting?
+
+Here we have to use the super function"""
+class A:
+    classvar1="I am in a class variable in class A"
+    def __init__(self):
+        self.var1="I an inside class A's constructor" #var1 is instance variable
+        self.classvar1="Instance var in class A"      #classvar1 is instance variable
+        self.special="Special1"                       #special is an instance variable.
+class B(A):
+    classvar1="I am in class B"                       #classvar1 is class variable
+    def __init__(self):
+        super().__init__() #This is to call the methods of class A (inherited class)
+        self.var1="I an inside class B's constructor" #var1 is instance variable
+        self.classvar1="Instance var in class B"      #classvar1 is instance variable
+
+a=A()
+b=B()
+print(b.special)
+
+
