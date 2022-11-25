@@ -1,0 +1,45 @@
+"""Lets create a base class which will maintain some rules like every class should have a printarea function.
+To set rules like this we use ABC metaclass"""
+
+from abc import ABCMeta, abstractmethod
+
+class Shape(metaclass= ABCMeta):
+    @abstractmethod #this decorator means that every class should have the below method defined.
+    def printarea(self):
+        return 0
+
+
+
+class Rectangle(Shape): #Rectangle class should inherit class Shape so that Shape can impose the rules on Rectangle
+    type = "Rectangle"
+    sides = 4
+
+    def __init__(self):
+        self.length = 6
+        self.breadth = 7
+
+    #def printarea(self):
+        #return self.length * self.breadth
+
+rect1=Rectangle()
+
+
+print("\n")
+"""An error is being thrown because class Rectangle donot contain a method callled printarea.
+Now tring the same thing with printarea method"""
+
+class Rectangle(Shape): #Rectangle class should inherit class Shape so that Shape can impose the rules on Rectangle
+    type = "Rectangle"
+    sides = 4
+
+    def __init__(self):
+        self.length = 6
+        self.breadth = 7
+
+    def printarea(self):
+        return self.length * self.breadth
+
+rect1=Rectangle()
+
+print(rect1.printarea())
+
