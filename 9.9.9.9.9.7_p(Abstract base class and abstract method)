@@ -43,3 +43,4 @@ rect1=Rectangle()
 
 print(rect1.printarea())
 
+#We cannot initiate object from abstract base class.
