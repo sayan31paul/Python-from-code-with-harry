@@ -1,0 +1,135 @@
+class Employee:
+    def __init__(self,fname,lname):
+        self.fname=fname
+        self.lname=lname
+        self.email=f"{fname}.{lname}@codewithharry.com"
+
+    def explain(self):
+        return f"This employee is {self.fname} {self.lname}"
+
+    def printemail(self):
+        return f"{self.fname}.{self.lname}@codewithharry.com"
+
+hindustani_supporter=Employee("Hindustani","Supporter")
+nikhil_raj_pandey=Employee("Nikhil","Raj")
+
+print(hindustani_supporter.explain())
+print(hindustani_supporter.email)
+
+hindustani_supporter.fname="US"
+print(hindustani_supporter.email)
+
+print(hindustani_supporter.printemail())
+print(hindustani_supporter.printemail) #This will not be printing the proper email, instead it will be  providing the address
+
+print("\n")
+
+class Employee:
+    def __init__(self,fname,lname):
+        self.fname=fname
+        self.lname=lname
+        self.email=f"{fname}.{lname}@codewithharry.com"
+
+    def explain(self):
+        return f"This employee is {self.fname} {self.lname}"
+
+    @property #when the object will call this function, it will not require () after the function name.
+    def printemail(self):
+        return f"{self.fname}.{self.lname}@codewithharry.com"
+
+hindustani_supporter=Employee("Hindustani","Supporter")
+nikhil_raj_pandey=Employee("Nikhil","Raj")
+
+print(hindustani_supporter.explain())
+print(hindustani_supporter.email)
+
+hindustani_supporter.fname="US"
+print(hindustani_supporter.email)
+
+#print(hindustani_supporter.printemail()) #since the property decorator is used, we cannot use it as function.
+print(hindustani_supporter.printemail) #This will not be printing the proper email, instead it will be  providing the address
+
+print("\n")
+#let us take an email as input and it changes the first name and the last name from the input email id.
+class Employee:
+    def __init__(self,fname,lname):
+        self.fname=fname
+        self.lname=lname
+        self.email=f"{fname}.{lname}@codewithharry.com"
+
+    def explain(self):
+        return f"This employee is {self.fname} {self.lname}"
+
+    @property #when the object will call this function, it will not require () after the function name.
+    def email(self):
+        return f"{self.fname}.{self.lname}@codewithharry.com"
+
+    @email.setter
+    def email(self,string):
+        print("Setting Now....")
+        names=string.split("@")[0]
+        self.fname=names.split(".")[0]
+        self.lname=names.split(".")[1]
+
+hindustani_supporter=Employee("Hindustani","Supporter")
+nikhil_raj_pandey=Employee("Nikhil","Raj")
+
+print(hindustani_supporter.explain())
+print(hindustani_supporter.email)
+
+hindustani_supporter.fname="US"
+print(hindustani_supporter.email)
+
+hindustani_supporter.email="this.that@codewithharry.com"
+print(hindustani_supporter.email)
+
+print("\n")
+#deleting the email attribute
+class Employee:
+    def __init__(self,fname,lname):
+        self.fname=fname
+        self.lname=lname
+        self.email=f"{fname}.{lname}@codewithharry.com"
+
+    def explain(self):
+        return f"This employee is {self.fname} {self.lname}"
+
+    @property #when the object will call this function, it will not require () after the function name.
+    def email(self):
+        if self.fname==None or self.lname==None:
+            return "Email is not set. Please set it using setter."
+        return f"{self.fname}.{self.lname}@codewithharry.com"
+
+    @email.setter
+    def email(self,string):
+        print("Setting Now....")
+        names=string.split("@")[0]
+        self.fname=names.split(".")[0]
+        self.lname=names.split(".")[1]
+
+    @email.deleter
+    def email(self):
+        self.fname=None
+        self.lname=None
+
+
+
+
+hindustani_supporter=Employee("Hindustani","Supporter")
+nikhil_raj_pandey=Employee("Nikhil","Raj")
+
+print(hindustani_supporter.explain())
+print(hindustani_supporter.email)
+
+hindustani_supporter.fname="US"
+print(hindustani_supporter.email)
+
+hindustani_supporter.email="this.that@codewithharry.com"
+print(hindustani_supporter.email)
+
+del (hindustani_supporter.email)
+print(hindustani_supporter.email)
+
+hindustani_supporter.email="Harry.Perry@codewithharry.com"
+print(hindustani_supporter.email)
+
