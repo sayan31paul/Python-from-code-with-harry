@@ -1,0 +1,46 @@
+class Employee:
+    def __init__(self,fname,lname):
+        self.fname=fname
+        self.lname=lname
+
+    def explain(self):
+        return f"This employee is {self.fname} {self.lname}"
+
+    @property
+    def email(self):
+        if self.fname==None or self.lname==None:
+            return "Email is not set. Please set it using setter"
+        return f"{self.fname}.{self.lname}@codewithharry.com"
+
+    @email.setter
+    def email(self,string):
+        print("Setting now")
+        names=string.split("@")[0]
+        self.fname=names.split(".")[0]
+        self.lname=names.split(".")[1]
+
+    @email.deleter
+    def email(self):
+        self.fname=None
+        self.lname=None
+
+skillf=Employee("Skill","F")
+print(skillf.email)
+
+"""In python everything is object i.e str is an object, int is an object. Object introspection means to know about
+the object.
+It includes knowing the type of the object, from which class it has came, where it is stored etc."""
+
+print(type(skillf))
+print(type("this is a strimg"))
+
+print(id("this is a string"))
+print(id("this is a string"))
+print(id("this"))
+
+print(dir("this is a string")) #this retuns all the methods that are defined inside string class.
+
+import inspect
+print(inspect.getmembers(skillf))
+
+
