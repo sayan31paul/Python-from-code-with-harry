@@ -1,3 +1,4 @@
+#class methods can change the value of a class variable from an object of the class.
 class Employee:
     no_of_leaves=8
 
