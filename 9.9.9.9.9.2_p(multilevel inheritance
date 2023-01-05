@@ -2,13 +2,13 @@
 class Dad:
     basketball=1
 
-class Son(Dad):
+class Son(Dad):     #Son is inheriting dad
     dance=1
     basketball=6
     def isdance(self):
         return f"Yes I dance {self.dance} no of times"
 
-class Grandson(Son):
+class Grandson(Son): #Grandson is inheriting son
     dance=6
     # This class can override isdance method in class Son
 
