@@ -1,0 +1,89 @@
+"""Iteratation: Iteration is a general term for taking each item of something. One after another. Any time you use a
+loop, explicit or implicit, to go over a group of items , that is iteration"""
+
+num= [1,2,3]
+for i in range(3):
+    print(i)
+
+"""Iterator: An iterator is an object that allows the programmner to traverse through a sequence of data without having
+to store the entire data in the memory."""
+
+"""Iterable: Iterable in a object, which one can iterate over.
+It generates an iterator when passed to __iter__() method.
+
+Ex- Lists, range etc are iterable."""
+
+l=[1,2,3]
+type(l)
+
+type(iter(l))
+
+"""How to know if something is iterable or not"""
+
+a=2
+#for i in a:
+    #print(i)
+
+dir(a)
+
+"""Generators : Python generators are a simple way of creating iterators"""
+
+def gen_demo():
+    yield "first_statement"
+    yield "second_statement"
+    yield "third_statement"
+
+gen=gen_demo()
+
+for i in gen:
+    print(i)
+
+# A normal function executes only once and gets out of the memory
+""" A generator does its work partially, gets out of the memory but it remenbers what it executed the last time,
+it remembers the variables it executed the last time. When generator is called the next time, it executes after 
+the prevoiusly called statement."""
+
+def square(num):
+    for i in range(1,num+1):
+        yield i**2
+
+gen=square(10)
+
+print(next(gen))
+print(next(gen))
+print(next(gen))
+print(next(gen))
+
+print("\n")
+
+for i in gen:
+    print(i) #note that the output is continuing from 25, which means that the generator has stored the previous statement it executed
+
+#Generator expression
+
+L=[i**2 for i in range(1,101)]  #List comprehension
+
+gen=(i**2 for i in range(1,101)) #This is the generator expression.
+#You can use generator expression if the logic is small.
+
+for i in gen:
+    print(i)
+
+"""When we are working with multiple images in DL, we cannot store all the images because our RAM is very small.
+In that case generator comes to help because it converts the images to numpy array one by one. It also remembers
+the previous image it stored in the numpy array."""
+
+#Chaining generators: Working with multiple generators simultaneously
+
+def fibonacci_numbers(nums):
+    x,y=0,1
+    for _ in range(nums):
+        x,y=y,x+y
+        yield x
+
+def square(nums):
+    for num in nums:
+        yield num**2
+
+print(sum(square(fibonacci_numbers(10))))
+
